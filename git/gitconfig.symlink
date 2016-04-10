@@ -1,0 +1,12 @@
+# Local/private config goes in the include
+[include]
+  path = ~/.gitconfig.local
+[color]
+	ui = auto
+[alias]
+	st = status
+	ci = commit
+	co = checkout
+	br = branch
+[core]
+  excludesfile = ~/.gitignore
