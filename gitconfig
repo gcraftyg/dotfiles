@@ -1,0 +1,15 @@
+[user]
+	# Moved to ~/.gitconfig_local
+
+[include]
+	path = ~/.gitconfig_local
+
+[alias]
+    co = checkout
+	br = branch
+	ci = commit
+	st = status
+    lg = log --graph --pretty --oneline --format='%C(magenta)%h%Creset -%C(red)%d%Creset %s %C(dim green)(%cr) [%an]'
+
+[init]
+	defaultBranch = main
