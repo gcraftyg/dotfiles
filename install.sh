@@ -13,7 +13,5 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/
 [[ ! -f ~/.gitconfig_local ]] && mv ~/.gitconfig ~/.gitconfig_local
 ln -s $(pwd)/gitconfig ~/.gitconfig
 
-ln -s $(pwd)/bash_aliases ~/.bash_aliases
-
 [[ -e ~/.zshrc ]] && mv ~/.zshrc ~/.zshrc.backup
 ln -s $(pwd)/zshrc ~/.zshrc
