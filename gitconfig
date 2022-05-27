@@ -9,7 +9,6 @@
 	br = branch
 	ci = commit
 	st = status
-    lg = log --graph --pretty --oneline --format='%C(magenta)%h%Creset -%C(red)%d%Creset %s %C(dim green)(%cr) [%an]'
-
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --branches
 [init]
 	defaultBranch = main
