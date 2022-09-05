@@ -9,6 +9,13 @@
 	br = branch
 	ci = commit
 	st = status
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --branches
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	lgb = lg --branches
+	rb = rebase -i --autosquash
+	f = push --force-with-lease
+
 [init]
 	defaultBranch = main
+
+[core]
+	editor = vi

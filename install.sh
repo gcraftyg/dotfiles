@@ -9,8 +9,8 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/p
 # Install zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 
-# Rename existing .gitconfig to .gitconfig_local
-[[ ! -f ~/.gitconfig_local ]] && mv ~/.gitconfig ~/.gitconfig_local
+# Rename existing .gitconfig to .gitconfig_local when .gitconfig_local does not already exist
+[[ ! -e ~/.gitconfig_local ]] && mv ~/.gitconfig ~/.gitconfig_local
 ln -s $(pwd)/gitconfig ~/.gitconfig
 
 [[ -e ~/.zshrc ]] && mv ~/.zshrc ~/.zshrc.backup
