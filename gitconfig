@@ -8,11 +8,17 @@
     co = checkout
 	br = branch
 	ci = commit
+	cim = commit -m
 	st = status
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	lgb = lg --branches
 	rb = rebase -i --autosquash
 	f = push --force-with-lease
+	# diff of non-committed changes
+	dd = diff --shortstat
+	# diff of last commit to main
+	df = diff --shortstat --numstat origin/main..HEAD
+	un = restore --staged .
 
 [init]
 	defaultBranch = main
