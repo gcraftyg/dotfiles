@@ -79,6 +79,9 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+# Source .zshrc.pre-oh-my-zsh if it exists
+[ -f ~/.zshrc.pre-oh-my-zsh ] && source ~/.zshrc.pre-oh-my-zsh
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
