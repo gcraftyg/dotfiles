@@ -35,3 +35,18 @@ echo "Created symlink between ~/.gitconfig to $(pwd)/.gitconfig"
 #[[ -e ~/.zshrc ]] && mv ~/.zshrc ~/.zshrc.backup
 ln -s $(pwd)/zshrc ~/.zshrc
 echo "Created symlink between ~/.zshrc to $(pwd)/.zshrc"
+
+# Show app switcher on all monitors
+echo "Enabling mac app switcher on all monitors..."
+defaults write com.apple.Dock appswitcher-all-displays -bool true;
+echo "reloading the dock..."
+killall Dock
+echo "Dock has been reloaded"
+
+# Setup screenshots directory
+echo "Configuring screenshots to be located in ~/screenshots"
+mkdir -p ~/screenshots
+defaults write com.apple.screencapture location ~/screenshots
+echo "Restarting system server to apply changes..."
+killall SystemUIServer
+echo "Screenshots location has been set"
