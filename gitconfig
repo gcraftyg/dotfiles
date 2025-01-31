@@ -11,6 +11,7 @@
 	cim = commit -m
 	st = status
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	lgd = lg --stat
 	lgb = lg --branches
 	rb = rebase -i --autosquash
 	f = push --force-with-lease
