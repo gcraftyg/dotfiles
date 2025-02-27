@@ -107,3 +107,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Print the git aliases
+alias ga="git config --list | grep ^alias | sed 's/^alias\.//' | sed 's/=/: /'"
